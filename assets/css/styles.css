@@ -183,3 +183,68 @@ footer {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
+/* Estilos para pantallas pequeñas (celulares) */
+@media (max-width: 600px) {
+    body {
+        font-size: 85%; /* Reducir ligeramente el tamaño del texto */
+        padding: 3%; /* Reducir padding general */
+    }
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 5%; /* Aumentar padding para mejor separación */
+    }
+    header h1 {
+        font-size: 1.5rem; /* Aumentar tamaño del título para mejor legibilidad */
+    }
+    header h3 {
+        font-size: 1rem; /* Ajustar subtítulo */
+    }
+    nav {
+        display: none; /* Ocultar menú si es necesario */
+    }
+    img {
+        width: 100%; /* Asegurar que las imágenes no excedan el ancho */
+        height: auto;
+    }
+    .container {
+        width: 95%; /* Aumentar el ancho para aprovechar más espacio */
+        box-shadow: none; /* Eliminar sombra para simplificar el diseño */
+        padding: 5%; /* Añadir padding interno */
+    }
+    .tech-container, .softskills-container {
+        flex-direction: column; /* Cambiar a diseño vertical */
+        gap: 10px; /* Reducir espacio entre elementos */
+        padding: 5%; /* Reducir padding interno */
+    }
+    .infobox {
+        padding: 10px; /* Reducir padding interno */
+        text-align: center; /* Centrar contenido */
+    }
+    .infobox h3 {
+        font-size: 1.2rem; /* Ajustar tamaño del texto */
+    }
+    ul, li {
+        font-size: 0.9rem; /* Reducir tamaño de las listas */
+    }
+    .btn {
+        width: 100%; /* Botones más grandes y centrados */
+        height: auto;
+        padding: 10px;
+        font-size: 1rem; /* Aumentar tamaño del texto en botones */
+    }
+    .container-contact-me {
+        flex-direction: column; /* Cambiar a diseño vertical */
+        gap: 15px; /* Espaciado entre botones */
+    }
+    main {
+        background-size: cover; /* Asegurar que la imagen de fondo se ajuste */
+        background-position: center; /* Centrar la imagen de fondo */
+    }
+    footer {
+        font-size: 0.8rem; /* Reducir tamaño del texto en el footer */
+        text-align: center;
+    }
+    /* Ajusta otros elementos según sea necesario */
+}
