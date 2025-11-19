@@ -186,65 +186,92 @@ footer {
 
 /* Estilos para pantallas pequeñas (celulares) */
 @media (max-width: 600px) {
+    /* Ajustes generales */
     body {
-        font-size: 85%; /* Reducir ligeramente el tamaño del texto */
-        padding: 3%; /* Reducir padding general */
+        font-size: 95%;
+        padding: 3%;
     }
+
+    /* Header */
     header {
-        flex-direction: column;
-        text-align: center;
-        padding: 5%; /* Aumentar padding para mejor separación */
+        padding: 16px 12px;
     }
     header h1 {
-        font-size: 1.5rem; /* Aumentar tamaño del título para mejor legibilidad */
+        font-size: 1.15rem;
+        line-height: 1.1;
     }
     header h3 {
-        font-size: 1rem; /* Ajustar subtítulo */
+        font-size: 0.95rem;
+        margin-top: 6px;
     }
-    nav {
-        display: none; /* Ocultar menú si es necesario */
-    }
-    img {
-        width: 100%; /* Asegurar que las imágenes no excedan el ancho */
-        height: auto;
-    }
+
+    /* Contenedor principal */
     .container {
-        width: 95%; /* Aumentar el ancho para aprovechar más espacio */
-        box-shadow: none; /* Eliminar sombra para simplificar el diseño */
-        padding: 5%; /* Añadir padding interno */
+        width: 100%;
+        max-width: 720px;
+        box-shadow: none;
+        padding: 16px;
+        gap: 12px;
+        height: auto;
+        margin: 0 auto;
     }
-    .tech-container, .softskills-container {
-        flex-direction: column; /* Cambiar a diseño vertical */
-        gap: 10px; /* Reducir espacio entre elementos */
-        padding: 5%; /* Reducir padding interno */
+
+    /* Secciones */
+    .container-aboutme,
+    .container-techincal-skills,
+    .container-softskills,
+    .container-contact-me {
+        width: 100%;
+        height: auto;
+        padding: 0;
     }
+
+    /* Columnas a vertical */
+    .tech-container,
+    .softskills-container {
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px;
+        border-radius: 14px;
+    }
+
     .infobox {
-        padding: 10px; /* Reducir padding interno */
-        text-align: center; /* Centrar contenido */
+        padding: 12px;
+        text-align: left;
+        width: 100%;
     }
     .infobox h3 {
-        font-size: 1.2rem; /* Ajustar tamaño del texto */
+        font-size: 1rem;
     }
+
     ul, li {
-        font-size: 0.9rem; /* Reducir tamaño de las listas */
+        font-size: 0.95rem;
+        padding-left: 1rem;
     }
-    .btn {
-        width: 100%; /* Botones más grandes y centrados */
-        height: auto;
-        padding: 10px;
-        font-size: 1rem; /* Aumentar tamaño del texto en botones */
-    }
+
+    /* Botones de contacto: ocupar todo el ancho */
     .container-contact-me {
-        flex-direction: column; /* Cambiar a diseño vertical */
-        gap: 15px; /* Espaciado entre botones */
-    }
-    main {
-        background-size: cover; /* Asegurar que la imagen de fondo se ajuste */
-        background-position: center; /* Centrar la imagen de fondo */
-    }
-    footer {
-        font-size: 0.8rem; /* Reducir tamaño del texto en el footer */
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
         text-align: center;
     }
-    /* Ajusta otros elementos según sea necesario */
+    .btn {
+        width: 100%;
+        height: auto;
+        padding: 12px;
+        font-size: 1rem;
+        border-radius: 6px;
+    }
+
+    /* Fondo y footer */
+    main {
+        background-size: cover;
+        background-position: center;
+        padding: 20px 0;
+    }
+    footer {
+        font-size: 0.85rem;
+        padding: 12px 10px;
+    }
 }
