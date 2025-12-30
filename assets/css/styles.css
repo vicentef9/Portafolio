@@ -33,36 +33,214 @@ header {
 main { 
     flex-grow: 1; /* Permite que el main ocupe el espacio restante */
     width: 100%;
-    background-color: white;
+    background-color: #2c2c3e;
     display: flex;
     align-items: center;
     justify-content: center;
     background-image: url("../imgs/R.webp");
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 40px 0;
 }
 
 .container {    
-    width: 65%;
-    height: 100%;
-    box-shadow: 0px 0px 31px -12px rgba(0,0,0,1);
+    width: 75%;
+    max-width: 1400px;
+    height: auto;
+    min-height: 100%;
+    box-shadow: 0px 0px 40px rgba(0,0,0,0.3);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 60px;
     background-color: white;
+    border-radius: 20px;
+    padding: 40px 20px;
+}
+
+/* Sección Hero con foto de perfil */
+.hero-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.profile-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1000px;
+    width: 90%;
+}
+
+.profile-image-container {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #9370DB;
+    box-shadow: 0 5px 15px rgba(147, 112, 219, 0.3);
+}
+
+.profile-image-placeholder {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #9370DB, #B19CD9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #9370DB;
+    box-shadow: 0 5px 15px rgba(147, 112, 219, 0.3);
+}
+
+.profile-image-placeholder i {
+    font-size: 80px;
+    color: white;
+}
+
+.status-badge {
+    position: absolute;
+    bottom: 10px;
+    right: -20px;
+    background: #4CAF50;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 3px 10px rgba(76, 175, 80, 0.4);
+}
+
+.status-badge i {
+    font-size: 0.6rem;
+    margin-right: 5px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.profile-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.profile-name {
+    color: #9370DB;
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 700;
+}
+
+.profile-subtitle {
+    color: #555;
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: 400;
+}
+
+.profile-description {
+    color: #666;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.profile-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.btn-contact, .btn-cv {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+.btn-contact {
+    background: #4CAF50;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-contact:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+}
+
+.btn-cv {
+    background: #607D8B;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-cv:hover {
+    background: #546E7A;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(96, 125, 139, 0.3);
 }
 
 .container-aboutme, 
 .container-techincal-skills, 
 .container-softskills, 
 .container-contact-me {
-    width: 70%;
-    height: 90%;
+    width: 90%;
+    max-width: 1200px;
+    padding: 40px 0;
 }
 
 .container-aboutme {
-    padding-top: 20px;
     text-align: center;
+    background: #f9f9f9;
+    border-radius: 20px;
+    padding: 50px 40px;
+}
+
+.section-title-orange {
+    color: #9370DB;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.about-description {
+    color: #555;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    margin: 15px 0;
+    text-align: justify;
 }
 
 .container-techincal-skills, .container-softskills   {
@@ -70,8 +248,22 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    gap: 15px;
+    gap: 25px;
+    padding: 40px 0;
+}
+
+.section-title {
+    color: #371c4b;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    color: #666;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
 }
 
 .container-contact-me p, .container-softskills p, .container-techincal-skills p, .container-aboutme p {
@@ -82,19 +274,118 @@ main h3{
     color: #371c4b;
 }
 
-.fa-windows {
-    color: rgb(2, 2, 160);
+/* Nuevo diseño de tarjetas técnicas */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 1200px;
 }
 
-.fa-database {
-    color: rgb(221, 100, 56);
+.tech-card {
+    background: white;
+    border: 2px solid #f0f0f0;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 250px;
 }
 
-.fa-git {
-    color: rgb(0, 187, 0);
+.tech-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    color: #9370DB;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #9370DB;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.card-title i {
+    font-size: 1.4rem;
+}
+
+.card-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card-list li {
+    color: #555;
+    padding: 10px 0;
+    font-size: 1rem;
+    border-bottom: 1px solid #f5f5f5;
+    transition: padding-left 0.3s ease;
+}
+
+.card-list li:hover {
+    padding-left: 10px;
+    color: #9370DB;
+}
+
+.card-list li:last-child {
+    border-bottom: none;
+}
+
+/* Colores específicos para cada tipo de tarjeta */
+.tech-card:nth-child(1) .card-title {
+    color: #9370DB;
+    border-color: #9370DB;
+}
+
+.tech-card:nth-child(2) .card-title {
+    color: #B19CD9;
+    border-color: #B19CD9;
+}
+
+.tech-card:nth-child(3) .card-title {
+    color: #9370DB;
+    border-color: #9370DB;
+}
+
+.tech-card:nth-child(4) .card-title {
+    color: #B19CD9;
+    border-color: #B19CD9;
+}
+
+.tech-card:nth-child(5) .card-title {
+    color: #9370DB;
+    border-color: #9370DB;
+}
+
+.tech-card:nth-child(6) .card-title {
+    color: #B19CD9;
+    border-color: #B19CD9;
+}
+
+/* Estilos anteriores para soft skills */
+.softskills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 800px;
 }
 
 .tech-container{
+    display: flex;
+    flex-direction: row;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.softskills-container {
     display: flex;
     flex-direction: row;
     border: 2px solid black;
@@ -184,94 +475,424 @@ footer {
     padding-bottom: 10px;
 }
 
-/* Estilos para pantallas pequeñas (celulares) */
-@media (max-width: 600px) {
-    /* Ajustes generales */
+/* Estilos para celulares pequeños (4.5" - 5.5") - 320px a 480px */
+@media (max-width: 480px) {
     body {
-        font-size: 95%;
-        padding: 3%;
+        font-size: 90%;
+        padding: 0;
     }
 
-    /* Header */
     header {
-        padding: 16px 12px;
+        padding: 15px 10px;
     }
     header h1 {
-        font-size: 1.15rem;
-        line-height: 1.1;
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+    header h3 {
+        font-size: 0.85rem;
+        margin-top: 5px;
+    }
+
+    main {
+        padding: 15px 8px;
+    }
+
+    .container {
+        width: 98%;
+        padding: 15px 10px;
+        gap: 30px;
+        border-radius: 12px;
+    }
+
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 15px;
+        gap: 20px;
+    }
+
+    .profile-image, .profile-image-placeholder {
+        width: 120px;
+        height: 120px;
+        border: 3px solid #9370DB;
+    }
+
+    .profile-image-placeholder i {
+        font-size: 50px;
+    }
+
+    .status-badge {
+        font-size: 0.75rem;
+        padding: 6px 15px;
+    }
+
+    .profile-name {
+        font-size: 1.3rem;
+    }
+
+    .profile-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .profile-description {
+        font-size: 0.9rem;
+    }
+
+    .profile-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .btn-contact, .btn-cv {
+        width: 100%;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .container-aboutme,
+    .container-techincal-skills,
+    .container-softskills,
+    .container-contact-me {
+        width: 100%;
+        padding: 25px 15px;
+    }
+
+    .container-aboutme {
+        padding: 30px 20px;
+    }
+
+    .section-title-orange {
+        font-size: 1.3rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .about-description {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .tech-grid, .softskills-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .tech-card {
+        padding: 20px 15px;
+        min-height: auto;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .card-list li {
+        font-size: 0.85rem;
+        padding: 8px 0;
+    }
+
+    .container-contact-me {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    footer {
+        font-size: 0.75rem;
+        padding: 10px 8px;
+    }
+}
+
+/* Estilos para celulares medianos a grandes (5.5" - 6.8") - 481px a 767px */
+@media (min-width: 481px) and (max-width: 767px) {
+    body {
+        font-size: 95%;
+        padding: 0;
+    }
+
+    header {
+        padding: 20px 15px;
+    }
+    header h1 {
+        font-size: 1.2rem;
+        line-height: 1.2;
     }
     header h3 {
         font-size: 0.95rem;
         margin-top: 6px;
     }
 
-    /* Contenedor principal */
-    .container {
-        width: 100%;
-        max-width: 720px;
-        box-shadow: none;
-        padding: 16px;
-        gap: 12px;
-        height: auto;
-        margin: 0 auto;
+    main {
+        padding: 20px 12px;
     }
 
-    /* Secciones */
+    .container {
+        width: 95%;
+        padding: 25px 18px;
+        gap: 40px;
+        border-radius: 15px;
+    }
+
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 25px;
+        gap: 25px;
+    }
+
+    .profile-image, .profile-image-placeholder {
+        width: 160px;
+        height: 160px;
+    }
+
+    .profile-image-placeholder i {
+        font-size: 65px;
+    }
+
+    .status-badge {
+        font-size: 0.85rem;
+        padding: 7px 18px;
+    }
+
+    .profile-name {
+        font-size: 1.6rem;
+    }
+
+    .profile-subtitle {
+        font-size: 1.05rem;
+    }
+
+    .profile-description {
+        font-size: 0.95rem;
+    }
+
+    .profile-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .btn-contact, .btn-cv {
+        width: 100%;
+        padding: 12px 25px;
+    }
+
     .container-aboutme,
     .container-techincal-skills,
     .container-softskills,
     .container-contact-me {
         width: 100%;
-        height: auto;
-        padding: 0;
+        padding: 35px 25px;
     }
 
-    /* Columnas a vertical */
-    .tech-container,
-    .softskills-container {
-        flex-direction: column;
-        gap: 12px;
-        padding: 12px;
-        border-radius: 14px;
+    .container-aboutme {
+        padding: 40px 30px;
     }
 
-    .infobox {
-        padding: 12px;
-        text-align: left;
-        width: 100%;
+    .section-title-orange {
+        font-size: 1.6rem;
     }
-    .infobox h3 {
+
+    .about-description {
         font-size: 1rem;
+        text-align: center;
     }
 
-    ul, li {
+    .tech-grid, .softskills-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .tech-card {
+        padding: 25px 20px;
+        min-height: auto;
+    }
+
+    .card-title {
+        font-size: 1.15rem;
+    }
+
+    .card-list li {
         font-size: 0.95rem;
-        padding-left: 1rem;
     }
 
-    /* Botones de contacto: ocupar todo el ancho */
     .container-contact-me {
         flex-direction: column;
         gap: 12px;
-        align-items: stretch;
-        text-align: center;
-    }
-    .btn {
-        width: 100%;
-        height: auto;
-        padding: 12px;
-        font-size: 1rem;
-        border-radius: 6px;
     }
 
-    /* Fondo y footer */
-    main {
-        background-size: cover;
-        background-position: center;
-        padding: 20px 0;
+    .btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
     }
+
     footer {
         font-size: 0.85rem;
         padding: 12px 10px;
+    }
+}
+
+/* Estilos para tablets pequeñas (8" - 10") - 768px a 900px */
+@media (min-width: 768px) and (max-width: 900px) {
+    body {
+        font-size: 100%;
+    }
+
+    header {
+        padding: 25px 20px;
+    }
+    header h1 {
+        font-size: 1.5rem;
+    }
+    header h3 {
+        font-size: 1.1rem;
+    }
+
+    main {
+        padding: 30px 20px;
+    }
+
+    .container {
+        width: 90%;
+        padding: 35px 30px;
+        gap: 50px;
+    }
+
+    .profile-card {
+        flex-direction: row;
+        text-align: left;
+        padding: 35px 30px;
+        gap: 30px;
+    }
+
+    .profile-image, .profile-image-placeholder {
+        width: 180px;
+        height: 180px;
+    }
+
+    .profile-image-placeholder i {
+        font-size: 75px;
+    }
+
+    .profile-name {
+        font-size: 1.8rem;
+    }
+
+    .profile-subtitle {
+        font-size: 1.15rem;
+    }
+
+    .profile-buttons {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .btn-contact, .btn-cv {
+        width: auto;
+        padding: 12px 30px;
+    }
+
+    .container-aboutme {
+        padding: 45px 35px;
+    }
+
+    .section-title-orange {
+        font-size: 1.8rem;
+    }
+
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+    }
+
+    .softskills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+    }
+
+    .tech-card {
+        padding: 28px 25px;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
+
+/* Estilos para tablets grandes (10" - 12") - 901px a 1024px */
+@media (min-width: 901px) and (max-width: 1024px) {
+    body {
+        font-size: 100%;
+    }
+
+    header {
+        padding: 28px 25px;
+    }
+
+    main {
+        padding: 35px 25px;
+    }
+
+    .container {
+        width: 85%;
+        padding: 40px 35px;
+        gap: 55px;
+    }
+
+    .profile-card {
+        padding: 40px 35px;
+        gap: 35px;
+    }
+
+    .profile-image, .profile-image-placeholder {
+        width: 190px;
+        height: 190px;
+    }
+
+    .profile-image-placeholder i {
+        font-size: 80px;
+    }
+
+    .profile-name {
+        font-size: 1.9rem;
+    }
+
+    .container-aboutme {
+        padding: 48px 40px;
+    }
+
+    .section-title-orange {
+        font-size: 1.9rem;
+    }
+
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .softskills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .tech-card {
+        padding: 30px 28px;
+    }
+}
+
+/* Estilos para pantallas medianas y grandes (1025px en adelante) */
+@media (min-width: 1025px) {
+    .tech-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
